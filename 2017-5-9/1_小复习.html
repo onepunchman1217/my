@@ -17,12 +17,13 @@
 	
 	var str = 'abcacca32cakfcawc';
 	
-//	console.log(str.replace(/a(([a-z]))c/g,function($0,$1,$2,$3){
+	console.log(str.replace(/a(([a-z]))c/g,function($0,$1,$2,$3){
 //		console.log($3);
-//	}));
+		return $3;
+	}));
 
 	
-//	console.log(str.match(/a[^c]+c/g));
+	console.log(str.match(/a[^c]+c/g));
 
 	
 	var str = '<div class="a">轻轻的</div>';

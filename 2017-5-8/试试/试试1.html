@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li class="li li2"></li>
+			<li></li>
+			<li></li>
+			<li class="li"></li>
+		</ul>
+		<script type="text/javascript">
+			var getByClass = (sClass) => {
+				var aEle = document.getElementsByTagName('*');
+				aEle = Array.from(aEle);
+				var arr = [];
+				var re = new RegExp('\\b'+sClass+'\\b');
+				aEle.forEach((ele,i) => {
+					if(re.test(ele.className)){
+						arr.push(ele);
+					}
+				})
+				return arr;
+			}
+			
+			console.log(getByClass('li'))
+		</script>
+	</body>
+</html>

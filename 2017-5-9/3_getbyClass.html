@@ -14,7 +14,7 @@
 <script type="text/javascript">
 	
 	/*
-		箭头函数：
+		箭头函数：第一种
 			
 			function getByClass(){
 				return 123
@@ -23,7 +23,7 @@
 			var getByClass = () => 123;
 		
 		=======================================
-		
+		第二种
 			function getByClass(a){
 				var b = 10;
 				return a+b;
@@ -44,7 +44,7 @@
 		
 		'\\n'
 		
-		/sClass/gi
+		/sClass/gi 
 			
 	*/
 	var lis = document.querySelectorAll('li');
@@ -60,7 +60,7 @@
 		aEle = Array.from(aEle);
 		//为了存放匹配上的元素
 		var arr = [];
-		//正则（|li1|）
+		//正则（|li1|），因为在字符串中\b是不能显示的，所以多加一个\转义符给他转回来
 		var re = new RegExp('\\b'+sClass+'\\b');  //还有别的方法吗？
 		aEle.forEach((ele,i) => {
 			//如果有className能够被正则匹配，说明有这个元素，就push到arr中

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str = 'adhsaajdahs321a8aid32a1a8sasaadsjadyc879a3a72a';
+			var arr = str.split('');
+			var max = -Infinity
+			var index = '';
+			str = arr.sort().join('');
+			str.replace(/(\w)\1+/g,function($0,$1){
+				if($0.length >max){
+					max = $0.length;
+					index = $1;
+				}
+			})
+			console.log(index+'出现的次数最多'+'出现了'+max+'次');
+		</script>
+	</body>
+</html>

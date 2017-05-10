@@ -28,11 +28,11 @@
 //	var str = 'abcbcabcbcc';
 
 	var str = 'abcbcabcbc';
-	
+	//在这里其实\3错放位置应该是被忽略的，但是这里正好有3个子选项，电脑读到\3的时候，又正好有第三个子选项所以就打印了
 	console.log(str.match(/(a(b\3(c))\2)\1/));
 	
-	
-//	console.log(str.match(/\1(a)/));
+	//在这里打印的就是后面括号里的a
+	console.log(str.match(/\1(a)/));
 	
 	
 	//console.log(str.replace(/(a(b(c))\2)\1\3/,function($0,$1,$2,$3){
