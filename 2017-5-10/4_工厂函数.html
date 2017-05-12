@@ -9,6 +9,7 @@
 	
 	/*
 		new Date(); 
+		凡是大写字母开头的例如Object，都是内置对象，内置对象行业规则写法都是大写开头
 	*/
 	
 	function Person(name,age,say){//工厂函数（构造函数）
@@ -25,6 +26,7 @@
 		//出厂
 		return obj;
 	}
+	//如果写new的话函数里面就不用var obj了也不用return了，把obj都改成this即可
 	var p = new Person('陈利',12,'叔叔还我钱');
 	
 //	console.log(p.name)

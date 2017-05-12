@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.active{
+				background:skyblue;
+			}
+			#box div{
+				width: 150px;
+				height: 150px;
+				border: 1px solid #000000;
+				display: none;
+			}
+			#box div.show{
+				display: block;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<input type="button" name="" id="" value="按钮1" />
+			<input type="button" name="" id="" value="按钮2" />
+			<input type="button" name="" id="" value="按钮3" />
+			<div>1111111</div>
+			<div>2222222</div>
+			<div>3333333</div>
+		</div>
+		<script type="text/javascript">
+			/*
+			 1、把变量提取出来
+			 2、拆function
+			 3、变量变属性，函数变方法(变量变属性，即var变成this，函数变方法即原来的函数function变为如Tab.prototype.change = function)
+			 4、修正this指向
+			 * */
+			
+			
+				
+			//放变量用
+			function Tab(box){//构造函数  this指向的是tab
+				this.box = document.getElementById(box);
+				this.btns = this.box.getElementsByTagName('input');
+				this.divs = this.box.getElementsByTagName('div');
+				this.oBtn = this.btns[0];
+				this.oDiv = this.divs[0];
+				this.oDiv.style.display = 'block';
+				this.oBtn.className = 'active';
+				this.init();
+			}
+			
+			Tab.prototype.init = function(){//这里的this指向的也是tab，用_this代替，但是为了区分开_this.change(this,i)里的this用
+				var _this = this;
+				for(let i=0;i<this.btns.length;i++){
+					_this.btns[i].onclick = function(){
+						_this.change(this,i);
+					}
+				}
+			}
+			
+			//
+			Tab.prototype.change = function(that,i){
+				this.oDiv.style.display = 'none';
+				this.divs[i].style.display = 'block';
+				that.className = 'active';
+				this.oBtn.className = '';
+				this.oBtn = that;
+				this.oDiv = this.divs[i];
+			}
+			
+			var t = new Tab('box');
+			
+			
+		</script>
+	</body>
+</html>

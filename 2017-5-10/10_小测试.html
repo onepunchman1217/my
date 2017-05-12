@@ -27,9 +27,9 @@
 //		alert('cccccc');
 //	}
 
-//	Function.prototype.say = function(){
-//		alert('我在function体内');
-//	}
+	Function.prototype.say = function(){
+		alert('我在function体内');
+	}
 
 	Person.prototype.say = function(){
 		alert('12345');
@@ -38,8 +38,10 @@
 	console.dir(Person);
 	
 	Person.say();
-	
-	
+//	顺序是先找Person.say  因为是直接调用同名的函数
+//	再找Function.prototype.say   因为Function是Person父级祖先
+//	再Object.prototype.say	
+//	再报错
 //	
 	
 	
