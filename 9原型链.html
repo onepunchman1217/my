@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//属性写在构造函数内
+			//方法写在构造函数的原型下
+			
+			//对象身上一定有原型链
+			//person就是函数
+			function Person(name,age){//person是构造函数
+				this.name = name;
+				this.age = age;
+				
+			}
+			//prototype只能给实例化对象使用
+//			Person.prototype.say = function(){
+//				alert(this.name)
+//			}
+			
+			//大写的Object也是只能给实例化对象使用
+			Object.prototype.say = function(){
+				alert(this.name)
+			}
+			console.log(Object)
+			var p = new Person('kk')//实例化对象   是对象
+			//say 先找函数内有没有，函数内没有再找prototy
+			p.say()
+			
+			console.dir(p);
+			
+			
+			//对象-原型链-构造函数-原型（对象）-（对象）原型链   最后找到的say要在原型下，不能在原型链下
+			//链找函数，函数找原型
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

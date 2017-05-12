@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			const:常亮
+					一样没有预解析
+					声明以后必须要赋值
+					在同一个域不允许有同名常量，不然会报错
+					
+			const num = 0;
+			const num=1就会报错
+			var num2可以不赋值
+			const num2必须要有值
+			var的话下面的会覆盖上面的
+			var a = 1;
+			var a = 2;
+			但是let和const一样下面的不会覆盖上面的，会报错
+			let可以声明不赋值
+			
+			
+			hasOwnProperty
+			某个属性是不是这个对象自身的属性
+			
+			constructor
+				某个对象是哪个构造函数构造出来的
+				虚的（提供查找构造函数线索）
+			
+			class Person{
+				constructor(name){
+					this.name = name;
+				}
+			}
+			
+			var  p = new Person('ali')
+			
+			
+			instanceof
+				二元运算符
+				某个对象是不是某个构造函数构造出来的
+				左值是不是右值构造出来的
+				左值是不是右值的儿子
+				右值是不是左值的老爹
+			
+			
+		</div>
+		<script type="text/javascript">
+			var a = 1;
+			var a = 2;
+			console.log(a)
+		</script>
+	</body>
+</html>

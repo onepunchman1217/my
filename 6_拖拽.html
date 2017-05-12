@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+<style>
+#box{
+	width:100px;
+	height: 100px;
+	background: red;
+	position: absolute;
+	left:0;
+	top:0;
+}	
+
+</style>
+</head>
+<body>
+	<div id="box"></div>
+<script type="text/javascript">
+	
+	var box = document.getElementById('box');
+	box.addEventListener('mousedown',dow)
+	function dow(ev){
+		var disX = ev.clientX - box.getBoundingClientRect().left;
+		var disY = ev.clientY - box.getBoundingClientRect().top;
+		console.log(disX,disY)
+	}
+	
+	box.addEventListener('mousemove',mov)
+	function mov(ev){
+		var disX = ev.clientX - box.getBoundingClientRect().left;
+		var disY = ev.clientY - box.getBoundingClientRect().top;
+		var l = ev.clientX - disX;
+		var t = ev.clientY - disY;
+		box.style.left = l+'px';
+		box.style.top = t+'px';
+	}
+	
+	
+</script>
+</body>
+</html>

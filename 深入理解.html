@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//属性写在构造函数内；例如：
+//				function Person(name,age){//person是构造函数
+//				this.name = name;
+//				this.age = age;}
+			
+			
+			//方法写在构造函数的原型下
+			//例如Person.prototype.say = xxxx
+			
+			//person就是函数
+			function Person(name,age){//person是构造函数
+				this.name = name;
+				this.age = age;
+				
+//				this.say = function(){
+//					alert(this.name+'123')
+//				}
+			}
+			//prototype只能给实例化对象使用
+			Person.prototype.say = function(){
+				alert(this.name)
+			}
+			
+			var p = new Person('kk')//实例化对象   是对象
+			
+			var p2 = new Person('zz');
+			//say 先找函数内有没有，函数内没有再找prototy
+			p.say()
+			p2.say()
+			
+			console.dir(Person);
+			
+			//console.log(p.say == p2.say);
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

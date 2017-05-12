@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(name){
+				this.name = name;
+			}
+			
+			console.log(Person.prototype)
+			
+			Person.prototype = {
+				constructor:Person,
+				say:function(){
+					console.log(this)
+					alert(123456)
+				}
+			}
+			console.log(Person.prototype)
+			
+			
+			
+		</script>
+	</body>
+</html>
