@@ -38,7 +38,12 @@
 //	}
 	
 	var f = new Fn('小明',18,'跑步');
-	
+	/*
+	 调用顺序：
+	 Fn.prototype.running
+	 Function.prototype.running
+	 Object.prototype.running
+	 * */
 	/*
 		原型链一定是找实例化对象的 ，构造函数下的原型
 		

@@ -38,6 +38,7 @@
 			（1）属性的继承{
 					调用父类并且使用call来修改this指向
 				}
+				Drag2.prototype = Drag.prototype;
 			（2）方法的继承{
 					将父类的原型上的方法通过for in赋值给子类
 				}
@@ -89,10 +90,7 @@
 	function Drag2(id){
 		Drag.call(this,id);
 	}
-	
-	
 	//{} = {}
-	
 //	Drag2.prototype = Drag.prototype;
 
 	

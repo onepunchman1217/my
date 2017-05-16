@@ -8,14 +8,14 @@
 <script type="text/javascript">
 	
 	/*
-		事件函数中的this指向该事件的对象。
+		事件函数中的this指向该事件的对象。例如第一个例子
 		
 		函数直接调用默认走window。
 		
 		单纯只要函数名 + 括号，this就是window
 		
 		方法的this默认为绑定方法的对象。arr.fn()
-		
+		//例子n是重点
 		
 		1.事件调用
 		2.自己调用
@@ -25,21 +25,20 @@
 		
 		
 	*/
-	
-	
+	//例子1
+	//弹document
 //	document.onclick = function(){
 //		alert(this);
-//	};;
+//	};
 	
-	
+	//弹window
 //	document.onclick = fn();
 //	function fn(){
 //		alert(this);
 //	};
 	
-	
+	//弹document，因为事件函数中的this指向该事件的对象
 //	document.onclick = fn;
-//	
 //	function fn(){
 //		alert(this);
 //	};
@@ -48,24 +47,23 @@
 //	document.onclick = function(){
 //		fn();
 //	}
-//	
 //	function fn(){
 //		let arr = [1,2,3,4];
+//		//fn加（）弹window
 //		alert(this);
 //		arr.fn2 = function (){
-////			alert(this);
+//			//弹arr里的东西，方法的this默认为绑定方法的对象。arr.fn()
+//			alert(this);
 //		}
 //		arr.fn2();
 //	};
 
 
-	
+	//弹window
 //	document.onclick = function(){
-//		
 //		function fn(){
 //			alert(this);
 //		}
-//		
 //		fn();
 //	}
 
@@ -83,18 +81,18 @@
 //			new fn.call()
 //		*/
 //		
-//		alert(tfn.call = function(){
-//			his);
-//		}
+////		alert(tfn.call = function(){
+////			his);
+////		}
 //		
-//		console.log(new fn.call);
-//		
-//		
+////		console.log(new fn.call);
 //		
 //		
-////		var arr = [1,2,3,4];
-////		
-////		console.log(new Array.prototype.push)
+//		
+//		
+//		var arr = [1,2,3,4];
+//		
+//		console.log(new Array.prototype.push)
 //		
 //	}
 
@@ -135,27 +133,27 @@
 		fn() < 事件 < new < call
 	*/
 	
-	document.onclick = function(){
-		
-		alert(this);//document
-		
-		fn1();//window
-		
-		new fn1;//fn1{}
-		
-		//new fn1.call(document);//报错
-		
-		setTimeout(function(){
-			
-			new fn1;//fn1{}
-			
-			fn1.call(document);
-		},1000);
-	}
-	
-	function fn1(){
-		alert(this);
-	}
+//	document.onclick = function(){
+//		
+//		alert(this);//document
+//		
+//		fn1();//window
+//		
+//		new fn1;//fn1{}
+//		
+//		//new fn1.call(document);//报错
+//		
+//		setTimeout(function(){
+//			
+//			new fn1;//fn1{}
+//			
+//			fn1.call(document);
+//		},1000);
+//	}
+//	
+//	function fn1(){
+//		alert(this);
+//	}
 	
 	
 	

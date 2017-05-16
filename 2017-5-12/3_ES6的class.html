@@ -12,19 +12,19 @@
 		
 			某个属性是不是这个对象*自身*的属性
 		
-		class
+		class：
 		
 	*/
-//	function Person(age,name){
-//		this.name = name;
-//		this.age = age;
-//	}
-//	
-//	Person.prototype.say = function(){
-//		alert(this.name+'是个胖纸!');
-//	}
+	function Person(age,name){
+		this.name = name;
+		this.age = age;
+	}
+	
+	Person.prototype.say = function(){
+		alert(this.name+'是个胖纸!');
+	}
 
-
+	//与上面es5的区别：http://es6.ruanyifeng.com/#docs/class看上半部分即可
 	class Person{
 		constructor(age,name){
 			this.name = name;

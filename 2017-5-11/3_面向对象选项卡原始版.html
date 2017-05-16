@@ -50,7 +50,7 @@
 				this.init();
 			}
 			
-			Tab.prototype.init = function(){//这里的this指向的也是tab，用_this代替，但是为了区分开_this.change(this,i)里的this用
+			Tab.prototype.init = function(){//这里的this指向的也是tab，用_this代替，但是为了区分开_this.change(this,i)里的this用，因为括号里的this指的是_this.btns[i]
 				var _this = this;
 				for(let i=0;i<this.btns.length;i++){
 					_this.btns[i].onclick = function(){
