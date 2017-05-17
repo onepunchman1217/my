@@ -16,6 +16,8 @@
 			获取在匹配的元素集中的第一个元素的属性值。
 		返回值为布尔值：
 			成立：true  否则：false
+		
+		如果是attr方式的话他返回的是undefined值，只有prop能够返回布尔值，从而利用布尔值
 	*/
 	
 	
@@ -29,7 +31,7 @@
 			$('input:checkbox').prop('checked',true);
 		}
 		
-		
+		//第二种方法的话不要写==true就可以
 //		if($('input:checkbox').attr('checked') == true){
 //			$('input:checkbox').attr('checked',false);
 //		}else{

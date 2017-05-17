@@ -147,7 +147,8 @@
 //		alert(3);
 //	});
 	
-	//divs[i].index=i
+	//obj.zdy相当于给obj添加了一个自定义属性类似于divs[i].index=i不用var index
+	//第一次调用的时候，因为obj.zdy没有等于的对象，所以走{}，同样第二行走[]，然后把这个fn函数push到obj.zdy的按下的数组里数组里，等到抬起的时候，推倒抬起的数组里；每个不同的参数，都会有一个不同的数组，相同都是按下的参数的话，那就都push到一个数组里
 	
 	function addEvent(obj,eventName,fn){//映射器 （同事件绑定多个函数的方法） 
 		obj.zdy = obj.zdy || {};

@@ -37,17 +37,17 @@
 	
 	
 	
-	
+	//方法1
 	//var obj2 = JSON.parse(JSON.stringify(obj)); //json2.js
 	
 	
 	var obj3 = {sex:'男不男'}
-	
+	//方法2
 	var obj2 = Object.assign(obj,obj3);
 	
 	/*
 		{} -> "{}" -> {} 
-		
+		这两个方法都是有兼容和function的问题的
 		弊端:
 			1.不兼容
 			2.function

@@ -34,9 +34,11 @@
 //	var d = $('div');
 //	var len = d.length-1;
 
-	var len = $('div').length-1; 
+	var len = $('div').length-1;
 	
 	$('div:eq('+len+')').css('background','red');
+	//相当于下面这种
+	$('div').eq(1)
 	
 </script>
 </body>

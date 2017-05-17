@@ -26,10 +26,16 @@
 		
 		const $div = $()
 		
+		通过指定的属性和值找元素
+			[attribute=value]
+		
+		
 		找到以某个字符开头的所有元素。
 			[attribute^="value"]
 		找到以某个字符开头的所有元素。	
 			[attribute$="value"]
+		找到包含某个字符的所有元素。	
+			[attribute*="value"]
 			
 		JQ中可以写原生的js
 		
@@ -40,7 +46,7 @@
 	
 //	$('div[class$="div"]').css('background','red');
 
-//	$('div[class*="div"]').css('background','red');
+	$('div[class*="div"]').css('background','red');
 	
 </script>
 </body>
