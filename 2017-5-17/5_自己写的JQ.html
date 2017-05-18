@@ -22,7 +22,7 @@
 		const jQuery = function(select){
 			return new jQuery.fn(select)
 		}
-		
+		//用键值对的方式去管理他下面的方法
 		jQuery.prototype = {
 			//如果不改指向的话，this指向的是new出来的东西，也就是jQuery.fn
 			constructor:jQuery,
@@ -52,8 +52,8 @@
 							}
 						}
 						
-					}else{
-						//说明查询行间样式
+					}else{//如果不是Object而是只有一个字符串的话
+						//说明查询行间样式，如果行间有这个样式，那就返回他的行间样式
 						if(this[0].style[arguments[0]]){
 							return this[0].style[arguments[0]];
 						}else{
