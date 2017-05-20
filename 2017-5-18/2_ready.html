@@ -17,7 +17,7 @@
 			当页面中所用的静态资源加载完成之后再执行函数中的代码
 		
 		
-		DOMContentLoaded（高版本才支持）
+		DOMContentLoaded（高版本才支持）也就是说先执行dom框架里的，在加载内容
 			当dom加载完成之后再执行函数中的代码
 		
 		onreadystatechange -> 
@@ -57,14 +57,14 @@
 //		alert(1);
 //	})
 
-//	$(document).ready(function(){
-//		alert(1);
-//	});
+	$(document).ready(function(){
+		alert(1);
+	});
 
 	//就是ready事件
-	$(function(){
-		alert(22);
-	});
+//	$(function(){
+//		alert(22);
+//	});
 	
 </script>
 </body>

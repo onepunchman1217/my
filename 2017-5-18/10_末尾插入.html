@@ -20,9 +20,11 @@ li{
 	/*
 		append:
 		 	往某个元素末位添加一个元素
+		 	$('ul').append($('<li>'+num+'</li>')).css('border','1px solid #000');，等于是给ul加的border
 		 	
 		appendTo: 	
 			往某个元素末位添加一个元素
+			$('<li>'+num+'</li>').appendTo($('ul')).css('border','1px solid #000');等于是给每一个新增的li加的border
 	*/
 	
 //	$('li').on('click.tan2',function(){
@@ -30,39 +32,39 @@ li{
 //	});
 	
 	let num = 0;
-//	$('input:button').click(function(){
-//		num++;
-//		//$('ul').append($('<li>'+num+'</li>')).css('border','1px solid #000');
-//		
-//		var li = $('<li>'+num+'</li>');
-//		
-//		li.click(function(){
-//			$('li').eq(0).trigger('click.tan2');
-//		});
-		
-//		li.appendTo($('ul')).css('border','1px solid #000');
-//	});
-
-
-	
-	$('ul').click(function(ev){
-		if(ev.target.tagName === 'LI'){
-			alert(2);
-		}
-	});
-	
 	$('input:button').click(function(){
 		num++;
+//		$('ul').append($('<li>'+num+'</li>')).css('border','1px solid #000');
 		
 		var li = $('<li>'+num+'</li>');
 		
+		li.click(function(){
+			$('li').eq(0).trigger('click.tan2');
+		});
+		
 		li.appendTo($('ul')).css('border','1px solid #000');
-		
-//		$('li').on('click',function(){
-//			alert(2);
-//		});
-		
 	});
+
+
+	
+//	$('ul').click(function(ev){
+//		if(ev.target.tagName === 'LI'){
+//			alert(2);
+//		}
+//	});
+//	
+//	$('input:button').click(function(){
+//		num++;
+//		
+//		var li = $('<li>'+num+'</li>');
+//		
+//		li.appendTo($('ul')).css('border','1px solid #000');
+//		
+////		$('li').on('click',function(){
+////			alert(2);
+////		});
+//		
+//	});
 	
 	
 	
