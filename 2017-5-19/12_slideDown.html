@@ -9,6 +9,7 @@
 	height: 100px;
 	background: red;
 	position:relative;
+	word-wrap: normal;
 	/*display: none;*/
 }
 
@@ -19,18 +20,26 @@
 </head>
 <body>
 	<button>显示</button>
-	<div id="div"></div>
+	<div id="div">
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+	</div>
 	
 <script src="jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	/*
-		slideDown:运动改变高度
+	 	
+		slideDown:运动改变高度为100%
+		sideUp:运动改变高度为0
+		slideToggle:没有就为100%，有就变为0
 		
+		值：可以写数字，也可以写英文
 		slow（慢），normal（200），fast（快）
 	*/
 //	$('button').click(function(){
-//		//$('#div').slideDown('normal');
 //		$('#div').slideUp('normal');
+//		$('#div').slideDown('normal');
 //	});
 
 	$('button').click(function(){

@@ -31,7 +31,8 @@
 		事件名.a1
 		
 		trigger('事件名 || 事件名+类名') //触发器
-		
+		trigger() 方法触发被选元素的指定事件类型。
+		$('#div').trigger('mouseover');即出发div的移动事件
 	*/
 	$('#div').on('click.a1',function(){
 		alert(1);
@@ -42,7 +43,7 @@
 	});
 	
 	$('#div').on('mouseover',function(){
-		alert(2);
+		alert(2134);
 	});
 	
 	$('#div2').mouseover(function(){

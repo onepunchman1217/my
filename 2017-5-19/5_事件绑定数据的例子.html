@@ -38,8 +38,8 @@ ul:after{
 	
 	for(var i=0;i<arr.length;i++){
 		var $li = $('<li></li>');
-		$li.on('click',{name:arr[i]},function(ev){
-			$(this).html(ev.data.name);
+		$li.on('click',{me:arr[i]},function(ev){
+			$(this).html(ev.data.me);
 		});
 		$('ul').append($li);
 	}
