@@ -22,7 +22,7 @@
 	btn.onclick = function(){
 		
 		var ajax = new XMLHttpRequest();
-		
+		//要把get.php中的user改成pname
 		ajax.open('get','php/get.php?pname='+user.value);
 		
 		ajax.send();
