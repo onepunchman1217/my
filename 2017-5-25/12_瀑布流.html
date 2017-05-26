@@ -60,8 +60,8 @@
 <script type="text/javascript">
 	/*
 			如何区分接口是jsonp的还是ajax的 
-				1.接口有没有回调函数字段
-				2.拿到数据之后，在浏览器上看看，是否有函数名+括号的
+				1.接口有没有回调函数字段	   （接口里面有callback的就是jsonp）	
+				2.拿到数据之后，在浏览器上看看，是否有函数名+括号的   （看php那个文件或者拿到数据之后打开浏览器有函数名加括号的是jsonp）
 	*/
 	
 	$.getJSON('http://www.wookmark.com/api/json/popular?callback=?',function(arr){
