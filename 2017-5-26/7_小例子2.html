@@ -57,7 +57,7 @@
 					//console.log(json[i][attr] , pVal)
 					if(json[i][attr] == pVal){//验证数据库的密码与填写的密码匹配否
 			 			setCookie('key',uVal,1);//如果匹配就设置key
-			 			window.location.reload();//刷新页面
+			 			window.location.reload();//刷新页面，输入完用户名密码肯定要刷新页面的啊
 			 			onOff = false;//区分有没有这个用户
 			 			return;
 			 		}else{
