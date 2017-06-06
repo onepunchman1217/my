@@ -23,9 +23,9 @@
 	}
 
 
-//	Person.say = function(){
-//		alert('cccccc');
-//	}
+	Person.say = function(){
+		alert('cccccc');
+	}
 
 	Function.prototype.say = function(){
 		alert('我在function体内');
@@ -38,7 +38,8 @@
 	console.dir(Person);
 	
 	Person.say();
-//	顺序是先找Person.say  因为是直接调用同名的函数
+	
+//	找Person.say  因为是直接调用同名的函数
 //	再找Function.prototype.say   因为Function是Person父级祖先
 //	再Object.prototype.say	
 //	再报错
